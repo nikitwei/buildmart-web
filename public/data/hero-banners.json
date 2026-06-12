@@ -1,0 +1,5 @@
+[
+  { "id": "banner-1", "title": "Renovation Sale", "subtitle": "Up to 40% off on paint & coatings", "image": "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=1200&h=400&fit=crop", "link": "/products?tag=sale", "cta": "Shop Now" },
+  { "id": "banner-2", "title": "New Power Tools", "subtitle": "Professional-grade tools for every job", "image": "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1200&h=400&fit=crop", "link": "/categories/tools-hardware", "cta": "Explore" },
+  { "id": "banner-3", "title": "Bulk Purchase Deals", "subtitle": "Extra discounts on orders above Rp 5.000.000", "image": "https://images.unsplash.com/photo-1541888946425-d81bb52b8e5b?w=1200&h=400&fit=crop", "link": "/products?tag=bulk", "cta": "Get Quote" }
+]
