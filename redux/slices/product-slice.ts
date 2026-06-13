@@ -39,6 +39,12 @@ export const fetchProductById = createAsyncThunk(
   async (id: string) => repo.getById(id),
 );
 
+export const fetchAllProducts = createAsyncThunk(
+  "products/fetchAll",
+  async (filters: import("@/domain/entities").SearchFilters) =>
+    repo.search(filters),
+);
+
 export const fetchProductsByCategory = createAsyncThunk(
   "products/fetchByCategory",
   async ({
@@ -89,6 +95,12 @@ const productSlice = createSlice({
         state.currentProduct = action.payload;
         if (action.payload) {
           state.items[action.payload.id] = action.payload;
+        }
+      })
+      .addCase(fetchAllProducts.fulfilled, (state, action) => {
+        state.listing = action.payload;
+        for (const p of action.payload.products) {
+          state.items[p.id] = p;
         }
       })
       .addCase(fetchProductsByCategory.fulfilled, (state, action) => {

@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { fetchCategories } from "@/redux/slices/category-slice";
-import { fetchProductsByCategory } from "@/redux/slices/product-slice";
+import { fetchAllProducts } from "@/redux/slices/product-slice";
 import Header from "@/components/layout/Header";
 import CategoryNav from "@/components/layout/CategoryNav";
 import Footer from "@/components/layout/Footer";
@@ -36,9 +36,7 @@ export default function ProductsPage() {
   }, [dispatch, categories.length]);
 
   useEffect(() => {
-    dispatch(
-      fetchProductsByCategory({ categorySlug: "cement-mortar", filters }),
-    );
+    dispatch(fetchAllProducts(filters));
   }, [dispatch, filters]);
 
   const handleFilterChange = useCallback(

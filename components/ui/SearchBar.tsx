@@ -47,7 +47,7 @@ export default function SearchBar() {
   }
 
   return (
-    <div ref={containerRef} className="relative flex-1 max-w-2xl">
+    <div ref={containerRef} className="relative flex-1">
       <form onSubmit={handleSubmit} className="flex">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-text-secondary" />
